@@ -1,11 +1,12 @@
 let dodger = document.getElementById("dodger");
+dodger.style.backgroundColor = "#FF69B4";
 
 function moveDodgerLeft() {
     let leftNumbers = dodger.style.left.replace("px", "");
     let left = parseInt(leftNumbers, 10);
    
     if (left > 0) {
-      dodger.style.left = `${left - 1}px`;
+      dodger.style.left = `${left - 2}px`;
     }
   }
 
@@ -13,8 +14,8 @@ function moveDodgerLeft() {
     let leftNumbers = dodger.style.left.replace("px", "");
     let left = parseInt(leftNumbers, 10);
    
-    if (left > 0) {
-      dodger.style.left = `${left + 1}px`;
+    if (left < 360) {
+      dodger.style.left = `${left + 2}px`;
     }
   }
 
